@@ -1,0 +1,55 @@
+﻿<Window x:Class="Workshop03.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Workshop03"
+        mc:Ignorable="d"
+        Title="Army Editor" Height="450" Width="800">
+
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <ListBox x:Name="listbox_troop_types" Grid.Column="0" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Vertical">
+                        <Label x:Name="label_troop_name" Content="{Binding Name}"/>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+                            <StackPanel.Resources>
+                                <local:ValueWidthConverter x:Key="ValueToWidth"/>
+                                <local:ValueColorConverter x:Key="ValueToColor"/>
+                            </StackPanel.Resources>
+
+                            <Label x:Name="label_strength" Height="15" Width="85" Margin="5" Padding="0" Background="LightGray" BorderBrush="Gray" BorderThickness="1">
+                                <Label Height="15" Width="{Binding Strength, Converter={StaticResource ValueToWidth}}" Background="{Binding Strength, Converter={StaticResource ValueToColor}}"/>
+                            </Label>
+                            <Label x:Name="label_vitality" Height="15" Width="85" Margin="5" Padding="0" Background="LightGray" BorderBrush="Gray" BorderThickness="1">
+                                <Label Height="15" Width="{Binding Vitality, Converter={StaticResource ValueToWidth}}" Background="{Binding Vitality, Converter={StaticResource ValueToColor}}"/>
+                            </Label>
+                            <Label x:Name="label_cost" Height="15" Width="85" Margin="5" Padding="0" Background="LightGray" BorderBrush="Gray" BorderThickness="1">
+                                <Label Height="15" Width="{Binding Cost, Converter={StaticResource ValueToWidth}}" Background="{Binding Cost, Converter={StaticResource ValueToColor}}"/>
+                            </Label>
+                            
+                        </StackPanel>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <StackPanel Grid.Column="1" HorizontalAlignment="Stretch">
+            <Label x:Name="label_total_cost" ContentStringFormat="Money: {0}$" Content="0" HorizontalAlignment="Center"/>
+            <Button x:Name="button_add" Content="Add To Army" Margin="10" Padding="10" Click="AddClick"/>
+            <Button x:Name="button_remove" Content="Remove From Army" Margin="10" Padding="10" Click="RemoveClick"/>
+            <Button x:Name="button_edit" Content="Edit trooper" Margin="10" Padding="10" Click="EditClick"/>
+        </StackPanel>
+
+        <ListBox x:Name="listbox_troop_collection" Grid.Column="2" HorizontalAlignment="Stretch" Margin="10"/>
+
+    </Grid>
+
+</Window>

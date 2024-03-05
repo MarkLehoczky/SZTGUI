@@ -1,0 +1,122 @@
+[
+	{
+		"question": "Mi a HTTP rövidítése?",
+		"A": "HyperText Transfer Protocol",
+		"B": "High Tech Transfer Protocol",
+		"C": "Hyper Transfer Text Protocol",
+		"D": "High Transfer Text Protocol",
+		"correct": "A"
+	},
+	{
+		"question": "Melyik nyelvet használja az AngularJS keretrendszer?",
+		"A": "Java",
+		"B": "JavaScript",
+		"C": "Python",
+		"D": "C++",
+		"correct": "B"
+	},
+	{
+		"question": "Melyik az alapvető adattípus a JavaScriptben?",
+		"A": "int",
+		"B": "string",
+		"C": "boolean",
+		"D": "array",
+		"correct": "B"
+	},
+	{
+		"question": "Melyik az egyik legnépszerűbb adatbázis-kezelő rendszer?",
+		"A": "MySQL",
+		"B": "Oracle",
+		"C": "MongoDB",
+		"D": "PostgreSQL",
+		"correct": "A"
+	},
+	{
+		"question": "Melyik az egyik legelterjedtebb verziókezelő rendszer?",
+		"A": "Subversion (SVN)",
+		"B": "Git",
+		"C": "Mercurial",
+		"D": "CVS",
+		"correct": "B"
+	},
+	{
+		"question": "Mi a legelterjedtebb CSS-előfeldolgozó?",
+		"A": "Less",
+		"B": "Sass",
+		"C": "Stylus",
+		"D": "CSS-in-JS",
+		"correct": "B"
+	},
+	{
+		"question": "Melyik az egyik legnépszerűbb frontend keretrendszer?",
+		"A": "Vue.js",
+		"B": "AngularJS",
+		"C": "Ember.js",
+		"D": "React",
+		"correct": "D"
+	},
+	{
+		"question": "Mi a legelterjedtebb operációs rendszer a szerverek között?",
+		"A": "Windows Server",
+		"B": "Linux",
+		"C": "Mac OS X Server",
+		"D": "Unix",
+		"correct": "B"
+	},
+	{
+		"question": "Melyik nem egy backend programozási nyelv?",
+		"A": "Java",
+		"B": "Python",
+		"C": "HTML",
+		"D": "Ruby",
+		"correct": "C"
+	},
+	{
+		"question": "Mi a legelterjedtebb adatátviteli protokoll az interneten?",
+		"A": "FTP",
+		"B": "SMTP",
+		"C": "TCP/IP",
+		"D": "HTTP",
+		"correct": "C"
+	},
+	{
+		"question": "Mi a legelterjedtebb adatbázis-kezelő rendszer a webes alkalmazások fejlesztéséhez?",
+		"A": "MySQL",
+		"B": "MongoDB",
+		"C": "SQLite",
+		"D": "Firebase",
+		"correct": "A"
+	},
+	{
+		"question": "Melyik nem egy verziókezelő rendszer?",
+		"A": "Git",
+		"B": "Mercurial",
+		"C": "SVN",
+		"D": "HTML",
+		"correct": "D"
+	},
+	{
+		"question": "Melyik a legnépszerűbb JavaScript keretrendszer a webes alkalmazások fejlesztéséhez?",
+		"A": "React",
+		"B": "Angular",
+		"C": "Vue.js",
+		"D": "Ember.js",
+		"correct": "A"
+	},
+	{
+		"question": "Mi az IP rövidítése?",
+		"A": "Internet Protocol",
+		"B": "Internet Program",
+		"C": "Internal Protocol",
+		"D": "Intranet Protocol",
+		"correct": "A"
+	},
+	{
+		"question": "Mi a legelterjedtebb programozási nyelv a webes alkalmazások fejlesztéséhez?",
+		"A": "Java",
+		"B": "Python",
+		"C": "Ruby",
+		"D": "JavaScript",
+		"correct": "D"
+	}
+]

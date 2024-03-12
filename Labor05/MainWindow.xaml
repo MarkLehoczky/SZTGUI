@@ -1,0 +1,30 @@
+﻿<Window x:Class="Labor05.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Labor05"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <ListBox Grid.Column="0" HorizontalAlignment="Stretch">
+            
+        </ListBox>
+
+        <ListBox Grid.Column="1" HorizontalAlignment="Stretch">
+            
+        </ListBox>
+
+        <StackPanel Orientation="Vertical" Grid.Column="2">
+            <Button x:Name="btn_load" Content="Load" Margin="10"/>
+            <Button x:Name="btn_add" Content="Add to Race" Margin="10"/>
+            <Button x:Name="btn_rmv" Content="Remove from Race" Margin="10"/>
+        </StackPanel>
+    </Grid>
+</Window>

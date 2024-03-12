@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "WoG9eL8c6xOQOXW9iOpjkBBldJqA7T1Vxwn4O9QPJBm7kcwqXpmRNSMC8iDHG5lD7hPOvj1tLPta+V27qYDgYQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\hallgato\\source\\repos\\Labor05\\Labor05\\Labor05.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\hallgato\\.nuget\\packages\\communitytoolkit.mvvm\\8.2.2\\communitytoolkit.mvvm.8.2.2.nupkg.sha512",
+    "C:\\Users\\hallgato\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\8.0.0\\microsoft.extensions.dependencyinjection.8.0.0.nupkg.sha512",
+    "C:\\Users\\hallgato\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\hallgato\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\hallgato\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
+    "C:\\Users\\hallgato\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,23 @@
+﻿<Window x:Class="Labor05.AthleteWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Labor05"
+        mc:Ignorable="d"
+        Title="AthleteWindow" Height="450" Width="300">
+    <StackPanel Orientation="Vertical" >
+        <Label Content="Name" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="LightSkyBlue" FontWeight="Bold"/>
+        <Label Content="{Binding Name}"/>
+        <Label Content="Personal Record" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="LightSkyBlue" FontWeight="Bold"/>
+        <Label Content="{Binding PersonalRecord}"/>
+        <Label Content="Seasonal Record" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="LightSkyBlue" FontWeight="Bold"/>
+        <Label Content="{Binding SeasonalRecord}"/>
+        <Label Content="Have Permission to Play" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="LightSkyBlue" FontWeight="Bold"/>
+        <Label Content="{Binding HavePermission}"/>
+        <Label Content="Member of an Organization" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="LightSkyBlue" FontWeight="Bold"/>
+        <Label Content="{Binding HaveOrganization}"/>
+        <Label Content="Market Value" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Background="LightSkyBlue" FontWeight="Bold"/>
+        <Label Content="{Binding MarketValue}"/>
+    </StackPanel>
+</Window>

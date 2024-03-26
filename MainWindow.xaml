@@ -1,0 +1,112 @@
+﻿<Window x:Class="QGXUN0_HFT_2023242.WPFClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QGXUN0_HFT_2023242.WPFClient"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <local:BookToFormattedBookConverter x:Key="FormatBook"/>
+    </Window.Resources>
+    
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0*"/>
+            <RowDefinition Height="0*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="0*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="3*"/>
+            </Grid.RowDefinitions>
+
+            <Label Content="B O O K     D A T A B A S E     M A N A G E R" FontSize="24" FontWeight="Black" HorizontalAlignment="Center" VerticalAlignment="Center" BorderBrush="GoldenRod" BorderThickness="2" Padding="10" Grid.Row="0"/>
+
+            <StackPanel Orientation="Vertical" Margin="40" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1">
+                <Button Content="AUTHOR MANAGER" FontSize="18" FontWeight="SemiBold" HorizontalAlignment="Stretch" Padding="15 10 15 10" Margin="10"/>
+                <Button Content="BOOK MANAGER" FontSize="18" FontWeight="SemiBold" HorizontalAlignment="Stretch" Padding="15 10 15 10" Margin="10"/>
+                <Button Content="COLLECTION MANAGER" FontSize="18" FontWeight="SemiBold" HorizontalAlignment="Stretch" Padding="15 10 15 10" Margin="10"/>
+                <Button Content="PUBLISHER MANAGER" FontSize="18" FontWeight="SemiBold" HorizontalAlignment="Stretch" Padding="15 10 15 10" Margin="10"/>
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="7*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Content="AUTHOR MANAGER" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="10" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"/>
+            <Label Content="CRUD" FontSize="18" FontWeight="SemiBold" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="10" Grid.Row="1" Grid.Column="0"/>
+            <Label Content="NON-CRUD" FontSize="18" FontWeight="SemiBold" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="10" Grid.Row="1" Grid.Column="1"/>
+
+            <ListView Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" HorizontalContentAlignment="Stretch">
+                <Button Content="Create new author" FontSize="16" FontWeight="SemiBold" HorizontalAlignment="Stretch" Padding="10 5 10 5" Margin="10"/>
+                <Button Content="List all authors" FontSize="16" FontWeight="SemiBold" HorizontalAlignment="Stretch" Padding="10 5 10 5" Margin="10"/>
+                <Button Content="Read author" FontSize="16" FontWeight="SemiBold" HorizontalAlignment="Stretch" Padding="10 5 10 5" Margin="10"/>
+                <Button Content="Update author" FontSize="16" FontWeight="SemiBold" HorizontalAlignment="Stretch" Padding="10 5 10 5" Margin="10"/>
+                <Button Content="Delete author" FontSize="16" FontWeight="SemiBold" HorizontalAlignment="Stretch" Padding="10 5 10 5" Margin="10"/>
+            </ListView>
+
+
+            <ListView Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" HorizontalContentAlignment="Stretch">
+                <Button Content="Highest rated author" FontSize="16" FontWeight="SemiBold" HorizontalAlignment="Stretch" Padding="10 5 10 5" Margin="10"/>
+                <Button Content="Lowest rated author" FontSize="16" FontWeight="SemiBold" HorizontalAlignment="Stretch" Padding="10 5 10 5" Margin="10"/>
+                <Button Content="Series from an author" FontSize="16" FontWeight="SemiBold" HorizontalAlignment="Stretch" Padding="10 5 10 5" Margin="10"/>
+                <Button Content="Select filtered book from an author" FontSize="16" FontWeight="SemiBold" HorizontalAlignment="Stretch" Padding="10 5 10 5" Margin="10"/>
+            </ListView>
+        </Grid>
+
+
+        <!-- `T List<T>(string title, IEnumerable<T> items, IEnumerable<T> picked = null)` eqvivalent -->
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="10*"/>
+            </Grid.RowDefinitions>
+
+            <Label Content="TODO: replace title with binding" FontSize="18" FontWeight="Bold" Padding="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Row="0"/>
+
+
+            <!-- !TODO: USE DataGrid INSTEAD -->
+            <DataGrid ItemsSource="{Binding Books}" AutoGenerateColumns="False" Grid.Row="1">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Author name" Width="Auto" Binding="{Binding Authors, Converter={StaticResource FormatBook}}"/>
+                    <DataGridTextColumn Header="Title" Width="1*" Binding="{Binding Title}"/>
+                    <DataGridTextColumn Header="Year" Width="Auto" Binding="{Binding Year}"/>
+                    <DataGridTextColumn Header="Publisher" Width="Auto" Binding="{Binding Publisher.PublisherName}"/>
+                    <DataGridTextColumn Header="Price" Width="Auto" Binding="{Binding Price}"/>
+                    <DataGridTextColumn Header="Rating" Width="Auto" Binding="{Binding Rating}"/>
+
+
+                    <!--
+                    <DataGridTextColumn Header="Author name" Width="20*" Binding="{Binding Authors, Converter={StaticResource FormatBook}}"/>
+                    <DataGridTextColumn Header="Title" Width="60*" Binding="{Binding Title}"/>
+                    <DataGridTextColumn Header="Year" Width="2.5*" Binding="{Binding Year}"/>
+                    <DataGridTextColumn Header="Publisher" Width="11*" Binding="{Binding Publisher.PublisherName}"/>
+                    <DataGridTextColumn Header="Price" Width="4*" Binding="{Binding Price}"/>
+                    <DataGridTextColumn Header="Rating" Width="2.5*" Binding="{Binding Rating}"/>                    
+                    -->
+                    
+                </DataGrid.Columns>
+            </DataGrid>
+            
+            
+            
+
+
+        </Grid>
+
+
+    </Grid>
+</Window>
